@@ -15,18 +15,35 @@ export function activate(context: vscode.ExtensionContext) {
 
         if (selectedText) {
           try {
-            const rawData = await convertSchemaToRawData(selectedText);
+            // Show processing message
+            const processingMessage = await vscode.window.withProgress({
+              location: vscode.ProgressLocation.Notification,
+              title: "Converting schema to Postman raw data...",
+              cancellable: false
+            }, async (progress) => {
+              const rawData = await convertSchemaToRawData(selectedText);
 
-            // Show the converted data in a new editor
-            const newDocument = await vscode.workspace.openTextDocument({
-              content: JSON.stringify(rawData, null, 2),
-              language: "json",
+              // Show the converted data in a new editor
+              const newDocument = await vscode.workspace.openTextDocument({
+                content: JSON.stringify(rawData, null, 2),
+                language: "json",
+              });
+              await vscode.window.showTextDocument(newDocument);
+
+              return rawData;
             });
-            vscode.window.showTextDocument(newDocument);
 
-            vscode.window.showInformationMessage(
-              "Schema converted to Postman raw data successfully!"
-            );
+            // Show success message
+            const successMessage = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Left);
+            successMessage.text = "Schema converted to Postman raw data successfully!";
+            successMessage.show();
+
+            // Hide success message after 4 seconds
+            setTimeout(() => {
+              successMessage.hide();
+              successMessage.dispose();
+            }, 4000);
+
           } catch (error) {
             const errorMessage =
               error instanceof Error ? error.message : String(error);

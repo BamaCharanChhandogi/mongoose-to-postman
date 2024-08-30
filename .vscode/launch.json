@@ -11,10 +11,7 @@
       "request": "launch",
       "args": ["--extensionDevelopmentPath=${workspaceFolder}"],
       "outFiles": ["${workspaceFolder}/out/**/*.js"],
-      "preLaunchTask": "${defaultBuildTask}",
-      "env": {
-        "GEMINI_API_KEY": "AIzaSyAB3Bdey5tQ2x_PTa6qq6tuviIQUldDIbE"
-      }
+      "preLaunchTask": "${defaultBuildTask}"
     }
   ]
 }

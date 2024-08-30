@@ -1,17 +1,44 @@
 {
-  "name": "mongoose-to-postman",
-  "displayName": "Mongoose to Postman",
-  "description": "Convert Mongoose schemas to Postman raw data",
-  "version": "0.0.1",
+  "name": "mongotest-schema-to-postman",
+  "displayName": "MongoTest: Schema to Postman",
+  "description": "Convert Mongoose schemas to Postman-ready JSON data for easy API testing. Streamline your MongoDB and Postman workflow.",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.60.0"
   },
   "categories": [
-    "Other"
+    "Testing",
+    "Formatters"
   ],
+  "icon": "images/icon.jpeg",
+  "keywords": [
+    "Mongoose",
+    "Postman",
+    "API",
+    "Schema",
+    "Converter",
+    "MongoDB",
+    "Testing",
+    "JSON"
+  ],
+  "homepage": "https://github.com/BamacharanChhandogi/mongotest-schema-to-postman",
+  "bugs": {
+    "url": "https://github.com/BamacharanChhandogi/mongotest-schema-to-postman/issues",
+    "email": "b.c.chhandogi@gmail.com"
+  },
+  "author": {
+    "name": "Bamacharan Chhandogi",
+    "email": "b.c.chhandogi@gmail.com",
+    "url": "https://github.com/BamacharanChhandogi"
+  },
+  "publisher": "BamacharanChhandogi",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BamacharanChhandogi/mongotest-schema-to-postman.git"
+  },
+  "license": "MIT",
   "activationEvents": [
-    "onCommand:mongoose-to-postman.convertToPostmanRaw",
-    "onCommand:mongoose-to-postman.setGeminiApiKey"
+    "onCommand:mongoose-to-postman.convertToPostmanRaw"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -19,10 +46,6 @@
       {
         "command": "mongoose-to-postman.convertToPostmanRaw",
         "title": "Convert to Postman Raw"
-      },
-      {
-        "command": "mongoose-to-postman.setGeminiApiKey",
-        "title": "Set Gemini API Key"
       }
     ],
     "menus": {
@@ -43,7 +66,7 @@
     "lint": "eslint src --ext ts",
     "test": "node ./out/test/runTest.js"
   },
-  "devDependencies": {
+"devDependencies": {
     "@types/glob": "^7.1.3",
     "@types/mocha": "^8.2.2",
     "@types/node": "14.x",
@@ -57,8 +80,6 @@
     "vscode-test": "^1.5.2"
   },
   "dependencies": {
-    "@google/generative-ai": "^0.1.3",
-    "dotenv": "^16.4.5",
-    "mongoose": "^8.6.0"
+    "@google/generative-ai": "^0.1.3"
   }
 }
