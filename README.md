@@ -23,9 +23,7 @@ The "Mongoose to Postman Converter" Visual Studio Code extension streamlines you
 
 Go through the tutorial to see how to convert your Mongoose schemas into ready-to-use Postman sample data.
 
-
-https://github.com/user-attachments/assets/98e4da95-b7de-4d84-9a71-27d594e4d7d7
-
+https://github.com/user-attachments/assets/c4a94ad5-00ce-4b62-826a-43705affa731
 
 ### Usage
 
