@@ -21,9 +21,9 @@
     "Testing",
     "JSON"
   ],
-  "homepage": "https://github.com/BamacharanChhandogi/mongotest-schema-to-postman",
+  "homepage": "https://github.com/BamaCharanChhandogi/mongoose-to-postman",
   "bugs": {
-    "url": "https://github.com/BamacharanChhandogi/mongotest-schema-to-postman/issues",
+    "url": "https://github.com/BamaCharanChhandogi/mongoose-to-postman/issues",
     "email": "b.c.chhandogi@gmail.com"
   },
   "author": {
@@ -34,7 +34,7 @@
   "publisher": "BamacharanChhandogi",
   "repository": {
     "type": "git",
-    "url": "https://github.com/BamacharanChhandogi/mongotest-schema-to-postman.git"
+    "url": "https://github.com/BamaCharanChhandogi/mongoose-to-postman.git"
   },
   "license": "MIT",
   "activationEvents": [
